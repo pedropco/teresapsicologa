@@ -17,6 +17,7 @@ header {
     height: 80px;
     background-color: #333;
     color:white;
+    padding-right: 20px;
 }
 .header {
     max-width: 1140px;
@@ -62,6 +63,8 @@ header {
 .menu li a:hover, .menu .active a {
     border-bottom: 5px solid #b28756;
 }
+
+
 
 /*termina menu, começa a parte principal do site*/
 
@@ -206,7 +209,7 @@ header {
     background-color:#333;
 }
 .second_banner1_dark {
-    width: 1140px;
+    max-width: 1140px;
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -224,7 +227,7 @@ header {
 }
 .second_banner2_dark {
     background-color: #333;
-    width: 1140px;
+    max-width: 1140px;
     display: flex;
     flex-direction: row;
     margin: auto;
@@ -401,8 +404,7 @@ header {
 }
 .section-team--imagem {
     width: 220px;
-    height: 200px;
-    height: auto;
+    height: 150px;
 }
 .section-team--name {
     padding: 5px;
@@ -656,6 +658,7 @@ a.button-top{
     margin-top: -60px;
     margin-left: 80px;
     background-color:#B28756;
+    cursor: pointer;
 }
 a.button-top div{
     width:26px;
@@ -672,12 +675,15 @@ a.button-top div{
     margin: auto;
     color: white;
 }
-.rodape-text{
-    display: inline-block;
+.rodape-text h5{
+    display: flex;
+    font-family: sans-serif;
+    font-size: 15px;
+    font-weight: 300;
 }
 .rodape-text img{
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
 }
 .rodape-box-copy {
     color: white;
@@ -703,18 +709,24 @@ a.button-top div{
     .logo {
         margin-left: 25px;
     }
+    header{
+        width: 100%;
+    }
     .menu-opener {
         display: block;
+        position: absolute;
         width: 45px;
-        margin-right: 20px;
+        top: 10px;
+        right: 4%;
     }
     nav {
-        position:absolute;
+        display: none;
+        position: absolute;
         z-index: 99;
         background-color: rgb(0 , 0 , 0, 0.9);
-        width: 70vw;
-        height: calc(100vh - 100px);
-        top: 100px;
+        width: 50vw;
+        height: 50vh;
+        top: 0;
         right: 0;
     }
     .menu ul {
@@ -764,26 +776,35 @@ a.button-top div{
         max-width: 800px;
         margin-left: 30px;
     }
+    .containerEspecialty{
+        width: 100%;    
+    }
 }
 
 @media (max-width:450px) {
     .slidearea h1 {
         font-size: 30px;
     }
+    header{
+        width: 100%;
+    }
     .logo {
         margin-left: 25px;
     }
     .menu-opener {
         display: block;
-        width: 45px;
-        margin-right: 20px;
+        position: absolute;
+        width: 35px;
+        top: 10px;
+        right: 5%;
     }
     nav {
+        display: none;
         position:absolute;
         z-index: 99;
         background-color: rgb(0 , 0 , 0, 0.9);
-        width: 60vw;
-        top: 20px;
+        width: 50vw;
+        top: 50%;
         right: 0;
     }
     .menu ul {
@@ -863,21 +884,7 @@ a.button-top div{
         justify-content: center;
         align-items: center;
     }
-    .rodape-box-direita, 
-    .rodape-box-centro, 
-    .rodape-box-esquerda {
-        flex:1;
-        width: 300px;
-    }
-    .rodape-box-centro p{
-        text-align: left;
-        margin-top: 90px;
-    }
-    .rodape-box-esquerda {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-    }
+
     .rodape-box-icon {
         margin-top: -200px;;
     }
@@ -891,4 +898,7 @@ a.button-top div{
         justify-content: center;
         margin-top: 80px;
     }
+    .containerEspecialty{
+        width: 100%;    
+    }   
 }

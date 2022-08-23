@@ -89,3 +89,26 @@ slidePrev();
 }
 
 sliding();*/
+
+document.querySelector('.button-top').addEventListener('click', () => {
+    window.scrollTo(0,0);
+})
+document.querySelector('nav ul li:nth-child(2)').addEventListener('click', () => {
+    window.scrollTo(0,650);
+})
+document.querySelector('nav ul li:nth-child(3)').addEventListener('click', () => {
+    window.scrollTo(0,1450);
+})
+document.querySelector('nav ul li:nth-child(4)').addEventListener('click', () => {
+    window.scrollTo(0,2250);
+})
+document.querySelector('nav ul li:nth-child(5)').addEventListener('click', () => {
+    window.scrollTo(0,2750);
+})
+
+//menu opener
+var nav = document.querySelector('nav');
+document.querySelector('.menu-opener').addEventListener('click', ()=>{
+    if(nav.style.display = 'none'){
+    document.querySelector('nav').style.display = 'block';  
+}})
