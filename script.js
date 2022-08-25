@@ -108,7 +108,46 @@ document.querySelector('nav ul li:nth-child(5)').addEventListener('click', () =>
 
 //menu opener
 var nav = document.querySelector('nav');
-document.querySelector('.menu-opener').addEventListener('click', ()=>{
-    if(nav.style.display = 'none'){
-    document.querySelector('nav').style.display = 'block';  
-}})
+document.querySelector('.menu-opener').addEventListener('click', closemenu)
+
+
+function closemenu(){
+    if (nav.style.display = 'none'){
+        nav.style.display = 'block'
+    } 
+}
+
+
+
+//testes slideshow debaixo
+
+responsiviness
+const mediaQuery = window.matchMedia('(max-width: 850px)')
+
+
+function transform_0(){
+    for(let i in slider3){ 
+        slider3[i].style.transform = "translatex(0%)";
+    }}
+
+
+function transform_180(){
+    for(let i in slider3){ 
+        slider3[i].style.transform = "translatex(-180%)";
+    }
+}
+    
+
+function transform_365(){
+    for(let i in slider3){ 
+        slider3[i].style.transform = "translatex(-365%)";
+    }
+}
+
+document.querySelector('.bolas.active').addEventListener('click', function () {
+    for(let i in slider3){ 
+    slider3[i].style.transform = "translatex(0%)";}
+});
+document.querySelector('.bolas.dois').addEventListener('click', transform_180);
+document.querySelector('.bolas.tres').addEventListener('click', transform_365);
+

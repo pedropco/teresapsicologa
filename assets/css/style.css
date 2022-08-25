@@ -59,6 +59,7 @@ header {
     display: flex;  /*o padrão de <a> é display:inline, aqui precisa botar o flex (ou block ) pra dar altura na letra e botar o efeito abaixo dela*/
     align-items: center;
     border-bottom: 5px solid #333;
+    cursor: pointer;
 }
 .menu li a:hover, .menu .active a {
     border-bottom: 5px solid #b28756;
@@ -121,7 +122,14 @@ header {
     justify-content: center;
     align-items: center;
 }
-.banner .bolinhas {
+.bolas-container{
+    width: 100%;
+    height: 20px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.banner .bolinhas, .bolas-container .bolas {
     height: 12px;
     width: 12px;
     border: 2px solid #b28756;
@@ -129,7 +137,7 @@ header {
     margin: 4px;
     cursor: pointer;
 }
-.banner .active{
+.banner .active, .second_banner_dark .active{
     background-color: #b28756;
 }
 
@@ -380,28 +388,8 @@ header {
     transform:rotate(135deg);
 }
 
-.sliders-pointers .bgteam2 {
-    width: 100%;
-    height: 20px;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.second_banner2_dark .bolinhas {
-    display: inline-block;
-    height: 12px;
-    width: 12px;
-    border: 2px solid #b28756;
-    border-radius: 15px;
-    margin: 4px;
-    margin-top:15px;
-    cursor: pointer;
-}
-.second_banner2_dark .bolinhas:hover, 
-.second_banner2_dark .active {
-    background-color: #b28756;
-}
+
+
 .section-team--imagem {
     width: 220px;
     height: 150px;
@@ -442,28 +430,8 @@ header {
     margin-right: 250px;
     margin-bottom: 25px;
 }
-.sliders-pointers .clients {
-    width: 100%;
-    height: 20px;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.second_banner_light .bolinhas {
-    display: inline-block;
-    height: 12px;
-    width: 12px;
-    border: 2px solid #b28756;
-    border-radius: 15px;
-    margin: 4px;
-    margin-top:15px;
-    cursor: pointer;
-}
-.second_banner_light .bolinhas:hover, 
-.second_banner_light .active {
-    background-color: #b28756;
-}
+
+
 
 .banner-clients {
     display: flex;
@@ -522,20 +490,7 @@ header {
     background-color: white;
 }
 
-.second_banner_light .bolinhas {
-    display: inline-block;
-    height: 12px;
-    width: 12px;
-    border: 2px solid #b28756;
-    border-radius: 15px;
-    margin: 4px;
-    margin-top:15px;
-    cursor: pointer;
-}
-.second_banner_light .bolinhas:hover, 
-.second_banner_light .active {
-    background-color: #b28756;
-}
+
 .getintouch {
     background-color:#b28756;
     color:white;
@@ -732,11 +687,8 @@ a.button-top div{
     .menu ul {
         flex-direction: column;
     }
-    .menu li a {
-        font-weight: bold;
-        height: 80px;
-        font-size: 27px;
-        margin-left:30px;
+    .slidearea { 
+        text-align: center;
     }
     .second_banner2_light {
         flex-direction: column;
@@ -744,11 +696,12 @@ a.button-top div{
         align-items: center;
     }
     .second_banner2_1 {
-        margin: 30px;
+        display: flex;
+        flex-direction: column;
         text-align: justify;
+        align-items: center;
     }
     .banner_laranja {
-        margin-left:350px;
         margin-bottom: 30px;
     }
     .second_banner2_dark {
@@ -777,10 +730,18 @@ a.button-top div{
         margin-left: 30px;
     }
     .containerEspecialty{
+        max-width: 640px;
+        width: 100%;    
+    }
+    
+}
+
+@media (max-width:650px) {
+    .containerEspecialty{
+        max-width: 300px;
         width: 100%;    
     }
 }
-
 @media (max-width:450px) {
     .slidearea h1 {
         font-size: 30px;
@@ -800,12 +761,11 @@ a.button-top div{
     }
     nav {
         display: none;
-        position:absolute;
+        position: absolute;
         z-index: 99;
         background-color: rgb(0 , 0 , 0, 0.9);
-        width: 50vw;
-        top: 50%;
-        right: 0;
+        width: 45vw;
+        right: 10;
     }
     .menu ul {
         flex-direction: column;
@@ -814,18 +774,24 @@ a.button-top div{
         font-weight: bold;
         height: 70px;
         font-size: 17px;
-        margin-left:30px;
+        margin-left:0px;
+    }
+    .slidearea { 
+        text-align: center;
     }
     .second_banner2_light {
         flex-direction: column;
         margin-left:10px;
     }
     .second_banner2_1 {
+        display: flex;
+        flex-direction: column;
         text-align: justify;
-        width: 350px;
+        align-items: center;
+        text-align: justify;
+        width: auto;
     }
     .banner_laranja {
-        margin-left:110px;
         margin-bottom: 30px;
     }
     .second_banner2_2 {
@@ -843,14 +809,11 @@ a.button-top div{
         min-width: 100%;
         border:none;
     }
-    .second_banner2_dark .sliders {
-        max-width: 350px;
-    }
     .second_banner2_dark .slide {
         width: 100%;
     }
     .second_banner2_dark.bgteam2 {
-        width: 100vw;
+        width: auto;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -898,7 +861,4 @@ a.button-top div{
         justify-content: center;
         margin-top: 80px;
     }
-    .containerEspecialty{
-        width: 100%;    
-    }   
 }
