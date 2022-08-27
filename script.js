@@ -74,6 +74,9 @@ function slidePrev (){
     }
 }
 
+//orange buttons below slider
+
+
 
 //tentando fazer loop do next e prev, mas nao está funcionando
 /*function sliding(){
@@ -106,48 +109,59 @@ document.querySelector('nav ul li:nth-child(5)').addEventListener('click', () =>
     window.scrollTo(0,2750);
 })
 
-//menu opener
-var nav = document.querySelector('nav');
-document.querySelector('.menu-opener').addEventListener('click', closemenu)
 
+
+//menu opener and closer
+//variables
+var nav = document.querySelector('nav');
+const menuX = document.querySelector('.menu-closer')
+
+//events
+document.querySelector('.menu-opener').addEventListener('click', openmenu)
+menuX.addEventListener('click', closemenu)
+
+//functions
+function openmenu(){
+    nav.style.width = '50vw';
+    menuX.classList.add('menu-show'); 
+}
 
 function closemenu(){
-    if (nav.style.display = 'none'){
-        nav.style.display = 'block'
-    } 
+    nav.style.width = '0px';
+    menuX.classList.remove('menu-show');
 }
 
 
 
-//testes slideshow debaixo
 
-responsiviness
-const mediaQuery = window.matchMedia('(max-width: 850px)')
+//responsive slideshow using addListener method of JS
+const mediaQueryList = window.matchMedia('(max-width: 850px)');
+
+function screenTest(e) {
+  if (e.matches) {
+    document.querySelector('.bolas.active').addEventListener('click', slidePrev);
+    document.querySelector('.bolas.dois').addEventListener('click', transform_2);
+    document.querySelector('.bolas.tres').addEventListener('click', transform_3);
+  } else {
+    document.querySelector('.bolas.active').addEventListener('click', slidePrev);
+    document.querySelector('.bolas.tres').addEventListener('click', slideNext);
+  }
+}
+
+mediaQueryList.addListener(screenTest);
 
 
-function transform_0(){
+function transform_2(){
     for(let i in slider3){ 
-        slider3[i].style.transform = "translatex(0%)";
-    }}
-
-
-function transform_180(){
-    for(let i in slider3){ 
-        slider3[i].style.transform = "translatex(-180%)";
+        slider3[i].style.transform = "translateX(-660px)";
     }
 }
     
 
-function transform_365(){
+function transform_3(){
     for(let i in slider3){ 
-        slider3[i].style.transform = "translatex(-365%)";
+        slider3[i].style.transform = "translateX(-1320px)";
     }
 }
 
-document.querySelector('.bolas.active').addEventListener('click', function () {
-    for(let i in slider3){ 
-    slider3[i].style.transform = "translatex(0%)";}
-});
-document.querySelector('.bolas.dois').addEventListener('click', transform_180);
-document.querySelector('.bolas.tres').addEventListener('click', transform_365);
 

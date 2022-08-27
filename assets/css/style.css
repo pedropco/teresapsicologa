@@ -35,7 +35,7 @@ header {
     height: 60px;
     background-color: orange;
 }
-.menu-opener {
+.menu-opener, .menu-closer {
     display: none;
 }
 .menu {
@@ -136,6 +136,9 @@ header {
     border-radius: 15px;
     margin: 4px;
     cursor: pointer;
+}
+.bolas.dois { 
+    display: none;
 }
 .banner .active, .second_banner_dark .active{
     background-color: #b28756;
@@ -370,8 +373,8 @@ header {
     height:26px;
     border-left:5px solid #b28756;
     border-top:5px solid #b28756;
-    top: 40%;
-    left: 15%;
+    top: 35%;
+    left: 5%;
     transform:rotate(315deg);
     cursor: pointer;
 }
@@ -382,9 +385,9 @@ header {
     height:26px;
     border-left:5px solid #b28756;
     border-top:5px solid #b28756;
-    top: 40%;
+    top: 35%;
     right: 2%;
-    right: 15%;
+    right: 5%;
     transform:rotate(135deg);
 }
 
@@ -635,6 +638,7 @@ a.button-top div{
     font-family: sans-serif;
     font-size: 15px;
     font-weight: 300;
+    margin-top: 10px;
 }
 .rodape-text img{
     width: 20px;
@@ -674,15 +678,29 @@ a.button-top div{
         top: 10px;
         right: 4%;
     }
-    nav {
-        display: none;
+    .menu-closer { 
+        display: block;
         position: absolute;
+        width: 45px;
+        height: 40px;
+        top: 5px;
+        right: 1%;
+        transform: translateX(50vw);
         z-index: 99;
+        transition: all 200ms;
+    }
+    .menu-show {
+        transform: translateX(0vw);
+    }
+    nav {
+        position: absolute;
+        z-index: 90;
         background-color: rgb(0 , 0 , 0, 0.9);
-        width: 50vw;
+        width: 0px;
         height: 50vh;
         top: 0;
         right: 0;
+        transition: all 200ms;
     }
     .menu ul {
         flex-direction: column;
@@ -733,6 +751,31 @@ a.button-top div{
         max-width: 640px;
         width: 100%;    
     }
+    .bolas.dois{
+        display: block;
+    }
+    .slidebutton2.prev2{
+        position: absolute;
+        width:26px;
+        height:26px;
+        border-left:5px solid #b28756;
+        border-top:5px solid #b28756;
+        top: 55%;
+        left: 2%;
+        transform:rotate(315deg);
+        cursor: pointer;
+    }
+    .slidebutton2.next2{
+        cursor: pointer;
+        position: absolute;
+        width:26px;
+        height:26px;
+        border-left:5px solid #b28756;
+        border-top:5px solid #b28756;
+        top: 55%;
+        right: 2%;
+        transform:rotate(135deg);
+    }
     
 }
 
@@ -759,13 +802,28 @@ a.button-top div{
         top: 10px;
         right: 5%;
     }
-    nav {
-        display: none;
+    .menu-closer { 
+        display: block;
         position: absolute;
+        width: 45px;
+        height: 40px;
+        top: 10px;
+        right: 1%;
+        transform: translateX(50vw);
         z-index: 99;
+        transition: all 200ms;
+    }
+    .menu-show {
+        transform: translateX(0vw);
+    }
+    nav {
+        position: absolute;
+        z-index: 90;
+        width: 0px;
         background-color: rgb(0 , 0 , 0, 0.9);
-        width: 45vw;
-        right: 10;
+        top: 0;
+        right: 0;
+        transition: all 200ms;
     }
     .menu ul {
         flex-direction: column;
@@ -841,13 +899,28 @@ a.button-top div{
         margin: 10px;
         font-size: 15px;
     }
-    .rodape-area {
-        display: flex;
-        flex-direction: column-reverse;
-        justify-content: center;
-        align-items: center;
+    .slidebutton2.prev2{
+        position: absolute;
+        width:26px;
+        height:26px;
+        border-left:5px solid #b28756;
+        border-top:5px solid #b28756;
+        top: 55%;
+        left: 5%;
+        transform:rotate(315deg);
+        cursor: pointer;
     }
-
+    .slidebutton2.next2{
+        cursor: pointer;
+        position: absolute;
+        width:26px;
+        height:26px;
+        border-left:5px solid #b28756;
+        border-top:5px solid #b28756;
+        top: 55%;
+        right: 5%;
+        transform:rotate(135deg);
+    }
     .rodape-box-icon {
         margin-top: -200px;;
     }

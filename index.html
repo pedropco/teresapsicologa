@@ -17,6 +17,7 @@
         </div>
         <div class="menu">
             <img class="menu-opener" src="assets/icones/menu2.png">
+            <img class="menu-closer" src="/assets/icones/X.png">
             <nav>
                 <ul>
                     <li class="active"><a>HOME</a></li>
@@ -226,34 +227,34 @@
             <div class="slidebutton2 next2"></div>
         </div> 
         <div class="bolas-container">
-            <div class="bolas active um"></div>
-            <div class="bolas dois"></div>
-            <div class="bolas tres" onclick="transform_365()"></div>
+            <div class="bolas active um" ></div>
+            <div class="bolas dois" ></div>
+            <div class="bolas tres" ></div>
         </div>>
     </section>
 
-    <section class="second_banner_light form">
+    <section class="second_banner_light">
         <div class="second_banner1_light">
             <h1>FORMULÁRIO DE CONTATO</h1>
         </div>
         <div class="section-contact">
-            <form method="POST">
-                <div class="section-contact--split">
-                    <input type="text" name="name" placeholder="NOME" />                   
-                    <input type="number" name="name" placeholder="CELULAR" /> 
-                    <input type="text" name="name" placeholder="EMAIL" />
-                </div></br>
-             <!-- Adicionar um tique com opções 'atendimento individual, casal, orientação vocacional' -->
-             <h1> Busco por tratamento:</h1></br>
-            <input type = "checkbox" id = "individual" name = "interesse" value = "codificação">
-            <label for = "individual"> Individual </label>
-            <input type = "checkbox" id = "familiar" name = "interesse" value = "música">
-            <label for = "familiar"> Casal/familiar </label>
-            <input type="checkbox" id="orientacao" name="interesse" value="orientacao">            
-            <label for="orientacao"> Orientação Vocacional </label> 
-            <textarea name="message" placeholder="MENSAGEM"></textarea>
-            <input type="submit" value="Send Message" class="button" />
-            </form>
+                <form action="https://formsubmit.co/2a3261865be1e90b929dcd7913d735a0" method="POST">
+                    <div class="section-contact--split">
+                        <input type="text" placeholder="NOME" /> 
+                        <input type="number" placeholder="celular">
+                        <input type="text" placeholder="email">
+                    </div>
+                </br>
+                <h1> Busco por tratamento:</h1></br>
+                <input type = "checkbox" id = "individual">
+                <label for = "individual"> Individual </label>
+                <input type = "checkbox" id = "familiar">
+                <label for = "familiar"> Casal/familiar </label>
+                <input type="checkbox" id="orientacao">            
+                <label for="orientacao"> Orientação Vocacional </label> 
+                <textarea name="message" placeholder="MENSAGEM"></textarea>
+                <input type="submit" value="Send Message" class="button" />
+                </form>
         </div>
     </section>
 
@@ -267,7 +268,7 @@
         <div class="rodape-text">   
         <h5> <img src="../assets/icones/location.png">&nbsp; DF 150, Condomínio Vivendas Friburgo, cj i, 2 - Grande Colorado</h5>
         <h5> <img src="../assets/icones/cellphone.png"> &nbsp; &nbsp;61 9.8206-5331</h5>
-        <h5> <img src="../assets/icones/email.png"> &nbsp; teresapiccolo2018@gmail.com</h5>
+        <h5> <img id='celular' src="../assets/icones/email3.png"> &nbsp; teresapiccolo2018@gmail.com</h5>
          </div>
               
         
