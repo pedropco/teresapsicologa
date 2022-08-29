@@ -56,7 +56,7 @@ document.querySelector('.slidebutton.next').addEventListener('click', () => slid
 const slider3 = document.querySelectorAll('.slideEspecialty')
 
 //slider prev
-const buttonsWrapperNext = document.querySelector(".slidebutton2.next2");
+/*const buttonsWrapperNext = document.querySelector(".slidebutton2.next2");
 buttonsWrapperNext.addEventListener('click', slideNext)
 function slideNext (){
     for(let i in slider3){ 
@@ -122,8 +122,9 @@ menuX.addEventListener('click', closemenu)
 
 //functions
 function openmenu(){
-    nav.style.width = '50vw';
     menuX.classList.add('menu-show'); 
+    
+    nav.style.width = '50vw';
 }
 
 function closemenu(){
@@ -134,24 +135,35 @@ function closemenu(){
 
 
 
-//responsive slideshow using addListener method of JS
+//responsive slideshow using addListener method of JS for 850 max-width
 const mediaQueryList = window.matchMedia('(max-width: 850px)');
+const bolaUm = document.querySelector('.bolas.um')
+const bolaDois =  document.querySelector('.bolas.dois')
+const bolaTres = document.querySelector('.bolas.tres')
 
 function screenTest(e) {
   if (e.matches) {
-    document.querySelector('.bolas.active').addEventListener('click', slidePrev);
-    document.querySelector('.bolas.dois').addEventListener('click', transform_2);
-    document.querySelector('.bolas.tres').addEventListener('click', transform_3);
-  } else {
-    document.querySelector('.bolas.active').addEventListener('click', slidePrev);
-    document.querySelector('.bolas.tres').addEventListener('click', slideNext);
-  }
+    document.querySelector('.bolas.um').addEventListener('click', transform_1);
+    bolaDois.addEventListener('click', transform_2);
+    bolaTres.addEventListener('click', transform_3);
+  } 
 }
 
 mediaQueryList.addListener(screenTest);
 
+function transform_1 (){
+    bolaUm.classList.add('active')
+    bolaDois.classList.remove('active');
+    bolaTres.classList.remove('active')
+    for(let i in slider3){ 
+        slider3[i].style.transform = "translatex(0%)";
+    }
+
+}
 
 function transform_2(){
+    bolaDois.classList.add('active');
+    bolaUm.classList.remove('active')
     for(let i in slider3){ 
         slider3[i].style.transform = "translateX(-660px)";
     }
@@ -159,9 +171,42 @@ function transform_2(){
     
 
 function transform_3(){
+    bolaDois.classList.remove('active');
+    bolaUm.classList.remove('active')
+    bolaTres.classList.add('active')
     for(let i in slider3){ 
         slider3[i].style.transform = "translateX(-1320px)";
     }
 }
 
 
+//responsive slideshow using addListener method of JS for 650 max-width
+const mediaQueryList2 = window.matchMedia('(max-width: 650px)');
+
+function screenTest2(event){ 
+    if (event.matches){
+
+    }
+
+}
+
+mediaQueryList2.addListener(screenTest2)
+
+const sliderContainer = document.querySelector('.containerEspecialty')
+const slider2 = document.querySelector('.slideEspecialty')
+const contemWidth = 330;//330px que inclui width e margins
+const buttonsWrapperNext = document.querySelector(".slidebutton2.next2");
+const buttonsWrapperPrev = document.querySelector(".slidebutton2.prev2");
+
+buttonsWrapperNext.addEventListener('click', slideNext)
+buttonsWrapperPrev.addEventListener('click', slidePrev)
+
+function slideNext(){
+    //poderia ser também slider.Container.scrollleft +- slider2.clientWidth, mas daria uma leve diferença
+    sliderContainer.scrollLeft += contemWidth;
+}
+
+function slidePrev(){
+    //poderia ser também slider.Container.scrollleft +- slider2.clientWidth, mas daria uma leve diferença
+    sliderContainer.scrollLeft -= contemWidth;
+}
