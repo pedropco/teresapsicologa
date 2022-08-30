@@ -341,10 +341,11 @@ header {
 }
 .containerEspecialty { 
     background-color: #333;
-    width: 960px;
+    width: 900px;
     height: 400px;
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     overflow: hidden;
 }
@@ -356,9 +357,7 @@ header {
     flex-direction: column;
     justify-content: center;        
     align-items: center;
-    margin-top: 55px;
-    margin-left: 15px;
-    margin-right: 45px;
+    margin: 15px;
     color: black;   
     transition: all 1s ease-in-out;
 }
@@ -749,7 +748,7 @@ a.button-top div{
         margin-left: 30px;
     }
     .containerEspecialty{
-        max-width: 640px;
+        max-width: 600px;
         width: 100%;    
     }
     .bolas-container .bolas{
@@ -757,6 +756,9 @@ a.button-top div{
     }
     .prevnext2{
         display: none;
+    }
+    .section-projects-phototext{
+        display: flex;
     }
     
 }
@@ -772,13 +774,16 @@ a.button-top div{
     .prevnext2{
         display: block;
     }
+    .section-projects-phototext{
+        display: flex;
+    }
 }
 @media (max-width:450px) {
     .slidearea h1 {
         font-size: 30px;
     }
     header{
-        width: 100%;
+        width: 100vw;
     }
     .logo {
         margin-left: 25px;
@@ -826,17 +831,23 @@ a.button-top div{
     .slidearea { 
         text-align: center;
     }
+    .second_banner_light { 
+        width: 100vw;
+    }
     .second_banner2_light {
         flex-direction: column;
         margin-left:10px;
+        display: flex;
+        align-items: center;
+        text-align: justify;
+        width: 100vw;
     }
     .second_banner2_1 {
         display: flex;
         flex-direction: column;
-        text-align: justify;
+        text-align: fit;
         align-items: center;
-        text-align: justify;
-        width: auto;
+        width: fit-content;
     }
     .banner_laranja {
         margin-bottom: 30px;
@@ -911,14 +922,7 @@ a.button-top div{
     .rodape-box-icon {
         margin-top: -200px;;
     }
-    .rodape-box-copy {
-        align-items: center;
-        justify-content: center;
-        margin-left: 0;
-    }
-    .rodape-box-copy h5 {
-        text-align: center;
-        justify-content: center;
-        margin-top: 80px;
+    .rodape-area {
+        margin-left: 10px;
     }
 }

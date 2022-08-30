@@ -96,20 +96,29 @@ sliding();*/
 document.querySelector('.button-top').addEventListener('click', () => {
     window.scrollTo(0,0);
 })
-document.querySelector('nav ul li:nth-child(2)').addEventListener('click', () => {
-    window.scrollTo(0,650);
-})
-document.querySelector('nav ul li:nth-child(3)').addEventListener('click', () => {
-    window.scrollTo(0,1450);
-})
-document.querySelector('nav ul li:nth-child(4)').addEventListener('click', () => {
-    window.scrollTo(0,2250);
-})
-document.querySelector('nav ul li:nth-child(5)').addEventListener('click', () => {
-    window.scrollTo(0,2750);
-})
+document.querySelector('nav ul li:nth-child(2)').addEventListener('click', scrollPerfil)
+document.querySelector('nav ul li:nth-child(3)').addEventListener('click', scrollEspecialidades)
+document.querySelector('nav ul li:nth-child(4)').addEventListener('click', scrollTratamentos)
+document.querySelector('nav ul li:nth-child(5)').addEventListener('click', scrollContato)
 
+function scrollPerfil(){
+    const perfil = document.querySelector('.perfil')
+    perfil.scrollIntoView({ behavior: 'smooth', block: 'center' });
 
+}
+function scrollEspecialidades (){
+    const especialidades = document.querySelector('.containerEspecialty')
+    especialidades.scrollIntoView({behavior: 'smooth', block: 'center'});
+}
+
+function scrollTratamentos(){
+    const tratamentos = document.querySelector('.tratamentos')
+    tratamentos.scrollIntoView({behavior: 'smooth', block: "start", inline: "nearest"})
+}
+function scrollContato(){
+    const contatos = document.querySelector('.section-contact')
+    contatos.scrollIntoView({behavior: 'smooth', block: 'center'})
+}
 
 //menu opener and closer
 //variables
@@ -165,7 +174,7 @@ function transform_2(){
     bolaDois.classList.add('active');
     bolaUm.classList.remove('active')
     for(let i in slider3){ 
-        slider3[i].style.transform = "translateX(-660px)";
+        slider3[i].style.transform = "translateX(-600px)";
     }
 }
     
@@ -175,7 +184,7 @@ function transform_3(){
     bolaUm.classList.remove('active')
     bolaTres.classList.add('active')
     for(let i in slider3){ 
-        slider3[i].style.transform = "translateX(-1320px)";
+        slider3[i].style.transform = "translateX(-1200px)";
     }
 }
 
@@ -194,7 +203,7 @@ mediaQueryList2.addListener(screenTest2)
 
 const sliderContainer = document.querySelector('.containerEspecialty')
 const slider2 = document.querySelector('.slideEspecialty')
-const contemWidth = 330;//330px que inclui width e margins
+const contemWidth = 300;//330px que inclui width e margins
 const buttonsWrapperNext = document.querySelector(".slidebutton2.next2");
 const buttonsWrapperPrev = document.querySelector(".slidebutton2.prev2");
 
