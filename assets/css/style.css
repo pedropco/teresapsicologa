@@ -402,178 +402,13 @@ header {
     margin-top: 25px;
     font-weight: 600;
 }
-.section-team--role {
-    color:#999;
-    margin-bottom: 20px;
-}
-.section-team--socialmedia {
-    display: flex;
-}
-.section-team--socialmedia a{
-    background-color: rgb(183, 175, 175);
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 25px;
-    height: 25px;
-    padding: 5px;
-    align-items: center;
-    border-radius: 13px;
-    margin-right: 10px;
-}
-.second_banner1_light .aspas {
-    font-size: 50px;
-    color: #999;
-    margin-bottom: -15px;
-}
-.second_banner1_light .aspastexto {
-    color: #999;
-    text-align: center;
-    margin-left: 250px;
-    margin-right: 250px;
-    margin-bottom: 25px;
-}
 
-
-
-.banner-clients {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    padding: 25px;
-}
-.banner-clients img {
-    margin:30px;    
-}
-
-.banner-preco {
-    display: flex;
-    margin:auto;
-    max-width: 1120px;
-}
-.banner-precos {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 245px;
-    height: 302px;
-    background-color: white;
-    margin: 30px;
-}
-.botao-precos--choose {
-    background-color: rgb(39, 37, 37);
-    font-weight: bold;
-    color: white;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-radius: 15px;
-    margin-top: 20px;
-}
-.banner-precos h1 {
-    padding: 10px;
-    font-size: 14px;
-    margin-bottom: 5px;
-}
-.banner-precos h3 {
-    font-size: 8px;
-    color: rgb(165, 158, 158);
-    margin-bottom: 14px;
-}
-.banner-precos h4,
-.banner.precos h5 {
-    font-size: 8px;
-    color: rgb(133, 127, 127);
-}
-
-.second_banner_light.branco {
-    background-color: white;
-}
-
-
-.getintouch {
-    background-color:#b28756;
-    color:white;
-    text-transform: uppercase;
-    font-size:13px;
-    font-weight: 600;
-    text-decoration: none;
-    padding: 10px 30px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    border-radius: 20px;
-}
-.second_banner2_dark .facts {
-    display: flex;
-    margin: auto;
-    margin-top: 7px;
-}
-.banner-facts {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    flex:1;
-    text-align: center;
-    color: white;
-    padding: 5px;
-    margin-right: 65px;
-    margin-bottom: 80px;
-}
-.banner-facts h1{
-    color:#b28756;
-    font-size: 30px;
-}
-.banner-facts h2{
-    color: grey;
-    font-size: 20px;
-    margin-top: -15px;
-}
-.banner-facts h3 {
-    color: white;
-    margin-bottom: 22px;
-}
-.banner-facts h4{
-    color:rgb(93, 91, 91);
-}
-.socialmedia {
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-}
-.banner-socialmedia {
-    display: flex;
-    align-items: center;
-    margin-right: 100px;
-    margin-left: -150px;
-}
-.banner-socialmedia--image {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    margin-right: 20px;
-}
-.socialmedia img {
-    width: 30px;
-    height: 30px;
-    margin-right: 5px;
-}
 
 .section-contact {
     max-width: 450px;
     margin:auto;
     text-align:center;
 }
-.section-contact input[type=checkbox]{ 
-    margin-left: 10px;
-}
-
-.section-contact input[type=text],
-.section-contact input[type=number],
 .section-contact textarea {
     width:100%;
     height:40px;
@@ -587,19 +422,23 @@ header {
     height:100px;
     resize:none;
 }
-.section-contact--split {
-    display:flex;
-}
-.section-contact--split input:first-child {
-    margin-right:20px;
-}
-.section-contact--split input:last-child {
-    margin-left: 20px;
-}
 .section-contact .button {
     background-color: #b28756;
     margin-bottom: 30px;
 }
+.button {
+    display:inline-block;
+    background-color:#B28756;
+    color:#FFF;
+    text-transform: uppercase;
+    font-size:12px;
+    font-weight:600;
+    text-decoration: none;
+    padding:10px 30px;
+    margin-top:30px;
+    border-radius:20px;
+}
+
 
 
 
@@ -648,18 +487,6 @@ a.button-top div{
     color: white;
     margin-top: 120px;
     margin-left: 25px;
-}
-.button {
-    display:inline-block;
-    background-color:#B28756;
-    color:#FFF;
-    text-transform: uppercase;
-    font-size:12px;
-    font-weight:600;
-    text-decoration: none;
-    padding:10px 30px;
-    margin-top:30px;
-    border-radius:20px;
 }
 
 
@@ -740,17 +567,6 @@ a.button-top div{
     .second_banner2_dark .slide {
         width: 240px;
     }
-    .banner-clients {
-        flex-wrap: wrap;
-    }
-    .banner-preco {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .second_banner2_dark.facts {
-        max-width: 800px;
-        margin-left: 30px;
-    }
     .containerEspecialty{
         max-width: 600px;
         width: 100%;    
@@ -763,6 +579,9 @@ a.button-top div{
     }
     .section-projects-phototext{
         display: flex;
+    }
+    .rodape-area {
+        margin-left: 10px;
     }
     
 }
@@ -900,21 +719,6 @@ a.button-top div{
     .second_banner2_dark .slidearea {
         margin-bottom: 5px;
     }
-    .banner-clients {
-        flex-wrap: wrap;
-    }
-    .banner-preco {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .second_banner2_dark.facts {
-        flex-wrap: wrap;
-        width: 100%;
-    }
-    .banner-facts {
-        min-width: 100%;
-        border: none;
-    }
     .second_banner_light form {
         margin: 10px;
         font-size: 15px;
@@ -938,9 +742,6 @@ a.button-top div{
         border-top:5px solid #b28756;
         float: right;
         transform:rotate(135deg);
-    }
-    .rodape-box-icon {
-        margin-top: -200px;;
     }
     .rodape-area {
         margin-left: 10px;
